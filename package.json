@@ -1,0 +1,15 @@
+{
+  "name": "uakino-loader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React app + Playwright backend that extracts video src URLs from uakino playlists",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n api,web -c green,cyan \"npm --prefix server run start\" \"npm --prefix client run dev\"",
+    "server": "npm --prefix server run start",
+    "client": "npm --prefix client run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
